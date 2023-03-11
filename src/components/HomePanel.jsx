@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router-dom';
+import Home from './Home';
 
 export const HomePanel = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -103,6 +104,49 @@ export const HomePanel = () => {
           {/* END LEFT MENU CONTENT */}
         </TabList>
         {/* END SIDEBAR TABLIST */}
+
+        {/* START RIGHT PART CONTENT */}
+        <div className='rightpart'>
+          <div className='rightpart_in'>
+            <div className='tokyo_tm_section'>
+              <TabPanel>
+                <div data-aos='fade-right' data-aos-duration='1200'>
+                  <Home />
+                </div>
+              </TabPanel>
+              {/* END HOME MENU TAB CONTENT */}
+
+              <TabPanel>
+                <div
+                  data-aos='fade-right'
+                  data-aos-duration='1200'
+                  data-aos-delay='100'
+                >
+                  {/* <About /> */}
+                </div>
+              </TabPanel>
+              {/* END ABOUT MENU TAB CONTENT */}
+
+              <TabPanel>{/* <Portfolio /> */}</TabPanel>
+              {/* END PORTFOLIO MENU TAB CONTENT */}
+
+              <TabPanel>{/* <News /> */}</TabPanel>
+              {/* END NEWS MENU TAB CONTENT */}
+
+              <TabPanel>
+                <div
+                  data-aos='fade-right'
+                  data-aos-duration='1200'
+                  data-aos-delay='200'
+                >
+                  {/* <Contact /> */}
+                </div>
+              </TabPanel>
+              {/* END CONTACT MENU TAB CONTENT */}
+            </div>
+          </div>
+        </div>
+        {/* END RIGHT PART CONTENT */}
       </Tabs>
     </>
   );
