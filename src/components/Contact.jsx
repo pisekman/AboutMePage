@@ -10,8 +10,12 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm()
-      // TODO
+      .sendForm(
+        'service_n4mkhz9',
+        'template_ugoztxr',
+        form.current,
+        'user_vYmDSd9PwIuRXUQEDjYwN',
+      )
       .then(
         (result) => {
           toast.success('Message Sent Successfully!', {

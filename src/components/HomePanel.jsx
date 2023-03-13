@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 import Home from './Home';
 import AboutMain from './about/AboutMain';
 import Contact from './Contact';
+import Portfolio from './Portfolio';
 
 export const HomePanel = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // toggle
-    //set local storage
     document.body.classList.toggle('dark', isDarkMode);
     localStorage.setItem('isDarkModeEnabled', isDarkMode);
   }, [isDarkMode]);
@@ -118,7 +117,6 @@ export const HomePanel = () => {
                   <Home />
                 </div>
               </TabPanel>
-              {/* END HOME MENU TAB CONTENT */}
 
               <TabPanel>
                 <div
@@ -129,9 +127,10 @@ export const HomePanel = () => {
                   <AboutMain />
                 </div>
               </TabPanel>
-              {/* END ABOUT MENU TAB CONTENT */}
 
-              <TabPanel>{/* <Portfolio /> */}</TabPanel>
+              <TabPanel>
+                <Portfolio />
+              </TabPanel>
 
               <TabPanel>{/* <News /> */}</TabPanel>
 
