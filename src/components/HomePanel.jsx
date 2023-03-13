@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router-dom';
 import Home from './Home';
 import AboutMain from './about/AboutMain';
+import Contact from './Contact';
 
 export const HomePanel = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -11,6 +12,8 @@ export const HomePanel = () => {
   useEffect(() => {
     // toggle
     //set local storage
+    document.body.classList.toggle('dark', isDarkMode);
+    localStorage.setItem('isDarkModeEnabled', isDarkMode);
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
@@ -100,9 +103,6 @@ export const HomePanel = () => {
                 </ul>
               </div>
               {/* END MENU */}
-
-              {/* <CopyRight /> */}
-              {/* END COPYRIGHT */}
             </div>
           </div>
           {/* END LEFT MENU CONTENT */}
@@ -132,10 +132,8 @@ export const HomePanel = () => {
               {/* END ABOUT MENU TAB CONTENT */}
 
               <TabPanel>{/* <Portfolio /> */}</TabPanel>
-              {/* END PORTFOLIO MENU TAB CONTENT */}
 
               <TabPanel>{/* <News /> */}</TabPanel>
-              {/* END NEWS MENU TAB CONTENT */}
 
               <TabPanel>
                 <div
@@ -143,7 +141,7 @@ export const HomePanel = () => {
                   data-aos-duration='1200'
                   data-aos-delay='200'
                 >
-                  {/* <Contact /> */}
+                  <Contact />
                 </div>
               </TabPanel>
               {/* END CONTACT MENU TAB CONTENT */}
