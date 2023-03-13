@@ -1,3 +1,5 @@
+import Logo from './Logo';
+
 const Home = () => {
   return (
     <>
@@ -6,11 +8,9 @@ const Home = () => {
           <div className='avatar'>
             <div
               className='image avatar_img'
-              style={
-                {
-                  // backgroundImage: "url/assets/img/slider/1.jpg"
-                }
-              }
+              style={{
+                backgroundImage: 'url/assets/img/slider/1.jpg',
+              }}
             ></div>
           </div>
 
@@ -20,6 +20,7 @@ const Home = () => {
               Creative WebDeveloper based in Warsaw and happy to
               travel all over Poland and Europe.
             </p>
+            <Logo />
             {/* social */}
           </div>
         </div>

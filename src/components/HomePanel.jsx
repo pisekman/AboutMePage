@@ -3,6 +3,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router-dom';
 import Home from './Home';
+import AboutMain from './about/AboutMain';
 
 export const HomePanel = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -20,7 +21,10 @@ export const HomePanel = () => {
     <>
       <h1>Page Title</h1>
 
-      <button onClick={toggleDarkMode}>
+      <button
+        className='theme-switcher-label'
+        onClick={toggleDarkMode}
+      >
         {isDarkMode ? (
           <>
             <FaMoon />
@@ -69,22 +73,22 @@ export const HomePanel = () => {
                     />
                     <span className='menu_content'>Service</span>
                   </Tab> */}
-                  {/* <Tab>
+                  <Tab>
                     <img
                       className='svg'
                       src='/assets/img/svg/briefcase.svg'
                       alt='briefcase'
                     />
                     <span className='menu_content'>Portfolio</span>
-                  </Tab> */}
-                  <Tab>
+                  </Tab>
+                  {/* <Tab>
                     <img
                       className='svg'
                       src='/assets/img/svg/paper.svg'
                       alt='paper'
                     />
                     <span className='menu_content'>News</span>
-                  </Tab>
+                  </Tab> */}
                   <Tab>
                     <img
                       className='svg'
@@ -122,7 +126,7 @@ export const HomePanel = () => {
                   data-aos-duration='1200'
                   data-aos-delay='100'
                 >
-                  {/* <About /> */}
+                  <AboutMain />
                 </div>
               </TabPanel>
               {/* END ABOUT MENU TAB CONTENT */}
