@@ -67,14 +67,7 @@ export const HomePanel = () => {
                     />
                     <span className='menu_content'>About</span>
                   </Tab>
-                  {/* <Tab>
-                    <img
-                      className='svg'
-                      src='/assets/img/svg/setting.svg'
-                      alt='avatar'
-                    />
-                    <span className='menu_content'>Service</span>
-                  </Tab> */}
+
                   <Tab>
                     <img
                       className='svg'
@@ -83,14 +76,6 @@ export const HomePanel = () => {
                     />
                     <span className='menu_content'>Portfolio</span>
                   </Tab>
-                  {/* <Tab>
-                    <img
-                      className='svg'
-                      src='/assets/img/svg/paper.svg'
-                      alt='paper'
-                    />
-                    <span className='menu_content'>News</span>
-                  </Tab> */}
                   <Tab>
                     <img
                       className='svg'
@@ -131,8 +116,6 @@ export const HomePanel = () => {
               <TabPanel>
                 <Portfolio />
               </TabPanel>
-
-              <TabPanel>{/* <News /> */}</TabPanel>
 
               <TabPanel>
                 <div

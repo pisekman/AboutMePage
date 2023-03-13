@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
- 
+import { Gallery, Item } from 'react-photoswipe-gallery';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 import ModalVideo from 'react-modal-video';
-import Modal from 'react-modal';
 import Social from './Social';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 const Portfolio = () => {
-  // for popup video
+  // for popup video for youtube
   const [isOpen, setOpen] = useState(false);
+
+  // popup video for vimeo
   const [isOpen2, setOpen2] = useState(false);
 
-  // for modal
+  // for modal details
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
 
+  // for modal details method
   function toggleModalThree() {
     setIsOpen3(!isOpen3);
   }
@@ -23,321 +29,477 @@ const Portfolio = () => {
 
   return (
     <>
-      {/* <SimpleReactLightbox> */}
-      <div className='container'>
-        <div className='tokyo_tm_portfolio'>
-          <div className='tokyo_tm_title'>
-            <div className='title_flex'>
-              <div className='left'>
-                <span>Portfolio</span>
-                <h3>Minimal Portfolio</h3>
+      <Gallery>
+        <div className='container'>
+          <div className='tokyo_tm_portfolio'>
+            <div className='tokyo_tm_title'>
+              <div className='title_flex'>
+                <div className='left'>
+                  <span>Portfolio</span>
+                  <h3>Creative Portfolio</h3>
+                </div>
               </div>
             </div>
-          </div>
+            {/* END TOKYO_TM_TITLE */}
 
-          <div className='portfolio_filter'>
-            <Tabs>
-              <TabList>
-                <Tab>All</Tab>
-                {/* All */}
-                <Tab>Vimeo</Tab>
-                {/* For Vimeo */}
-                <Tab>Youtube</Tab>
-                {/* For Youtube */}
-                <Tab>Photography</Tab>
-                {/* For Images */}
-                <Tab>Details</Tab>
-                {/* For Popup Details */}
-              </TabList>
-              {/* END TABLIST */}
-
-              <div className='list_wrapper'>
-                <TabPanel>
-                  <ul className='portfolio_list'>
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/5.jpg'
-                            alt='Vimeo'
-                            onClick={() => setOpen2(true)}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Teresa Butler</h3>
-                          <span>Vimeo</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END VIMEO */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='100'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/2.jpg'
-                            alt='Youtube'
-                            onClick={() => setOpen(true)}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Ashely Flores</h3>
-                          <span>Youtube</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END YOUTUBE */}
-                    {/* <SRLWrapper> */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <a href='assets/img/portfolio/4.jpg'>
+            <div className='portfolio_filter'>
+              <Tabs>
+                <TabList>
+                  <Tab>All</Tab>
+                  <Tab>Vimeo</Tab>
+                  <Tab>Youtube</Tab>
+                  <Tab>Photography</Tab>
+                  <Tab>Details</Tab>
+                </TabList>
+                {/* END TABLIST */}
+                <div className='list_wrapper'>
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/4.jpg'
-                              alt='Childhood'
+                              src='assets/img/portfolio/5.jpg'
+                              alt='Vimeo'
+                              data-tip
+                              data-for='vimeo'
+                              onClick={() => setOpen2(true)}
                             />
-                          </a>
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Derek Smith</h3>
-                          <span>Photo shoot</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END SHOT */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='300'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <a href='assets/img/portfolio/3.jpg'>
-                            <img
-                              src='assets/img/portfolio/3.jpg'
-                              alt='Besh Award'
-                            />
-                          </a>
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Gloria Genkins</h3>
-                          <span>Photo shoot</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END SHOT */}
-                    {/* </SRLWrapper> */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='100'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/6.jpg'
-                            alt='Details'
-                            onClick={toggleModalThree}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Selena Gomez</h3>
-                          <span> Details</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END DETAILS */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/7.jpg'
-                            alt='Details'
-                            onClick={toggleModalFour}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Ave Simone</h3>
-                          <span> Details</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END DETAILS */}
-                  </ul>
-                  {/* END PORTFOLIO LIST */}
-                </TabPanel>
-                {/* END ALL All */}
-
-                <TabPanel>
-                  <ul className='portfolio_list'>
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/5.jpg'
-                            alt='Vimeo'
-                            onClick={() => setOpen2(true)}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Teresa Butler</h3>
-                          <span>Vimeo</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END VIMEO */}
-                  </ul>
-                  {/* END PORTFOLIO LIST */}
-                </TabPanel>
-                {/* END VIMEO VIDEO */}
-
-                <TabPanel>
-                  <ul className='portfolio_list'>
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/2.jpg'
-                            alt='Youtube'
-                            onClick={() => setOpen(true)}
-                          />
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Ashely Flores</h3>
-                          <span>Youtube</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END YOUTUBE */}
-                  </ul>
-                  {/* END PORTFOLIO LIST */}
-                </TabPanel>
-                {/* END YOUTUBE VIDEO */}
-
-                <TabPanel>
-                  <ul className='portfolio_list'>
-                    {/* <SRLWrapper> */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <a href='assets/img/portfolio/4.jpg'>
-                            <img
-                              src='assets/img/portfolio/4.jpg'
-                              alt='Childhood'
-                            />
-                          </a>
-                        </div>
-                        <div className='mobile_title'>
-                          <h3>Derek Smith</h3>
-                          <span>Photo shoot</span>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END SHOT */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='100'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <a href='assets/img/portfolio/3.jpg'>
-                            <img
-                              src='assets/img/portfolio/3.jpg'
-                              alt='Besh Award'
-                            />
-                          </a>
-                          <div className='mobile_title'>
-                            <h3>Gloria Genkins</h3>
-                            <span>Photo shoot</span>
+                            <ReactTooltip
+                              id='vimeo'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Teresa Butler</h5>
+                                <span>Vimeo</span>
+                              </div>
+                            </ReactTooltip>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    {/* END SHOT */}
-                    {/* </SRLWrapper> */}
-                  </ul>
-                  {/* END PORTFOLIO LIST */}
-                </TabPanel>
-                {/* END PHOTOGRAHY */}
+                      </li>
+                      {/* END VIMEO */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/2.jpg'
+                              alt='Youtube'
+                              data-tip
+                              data-for='youtube'
+                              onClick={() => setOpen(true)}
+                            />
+                            <ReactTooltip
+                              id='youtube'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Ashely Flores</h5>
+                                <span>Youtube</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END YOUTUBE */}
 
-                <TabPanel>
-                  <ul className='portfolio_list'>
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/6.jpg'
-                            alt='Details'
-                            onClick={toggleModalThree}
-                          />
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <Item
+                              original='assets/img/portfolio/4.jpg'
+                              thumbnail='assets/img/portfolio/4.jpg'
+                              width={500}
+                              height={550}
+                            >
+                              {({ ref, open }) => (
+                                <img
+                                  src='assets/img/portfolio/4.jpg'
+                                  alt='Childhood'
+                                  data-tip
+                                  data-for='shot'
+                                  role='button'
+                                  ref={ref}
+                                  onClick={open}
+                                />
+                              )}
+                            </Item>
+                            <ReactTooltip
+                              id='shot'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Derek Smith</h5>
+                                <span>Shot</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
                         </div>
-                        <div className='mobile_title'>
-                          <h3>Selena Gomez</h3>
-                          <span> Details</span>
+                      </li>
+                      {/* END SHOT */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='300'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <Item
+                              original='assets/img/portfolio/3.jpg'
+                              thumbnail='assets/img/portfolio/3.jpg'
+                              width={500}
+                              height={550}
+                            >
+                              {({ ref, open }) => (
+                                <img
+                                  src='assets/img/portfolio/3.jpg'
+                                  alt='Childhood'
+                                  data-tip
+                                  data-for='shot'
+                                  role='button'
+                                  ref={ref}
+                                  onClick={open}
+                                />
+                              )}
+                            </Item>
+                            <ReactTooltip
+                              id='shot2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Gloria jenkins</h5>
+                                <span>Shot</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                    {/* END DETAILS */}
-                    <li
-                      data-aos='fade-right'
-                      data-aos-duration='1200'
-                      data-aos-delay='100'
-                    >
-                      <div className='inner'>
-                        <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                          <img
-                            src='assets/img/portfolio/7.jpg'
-                            alt='Details'
-                            onClick={toggleModalFour}
-                          />
+                      </li>
+                      {/* END SHOT */}
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/6.jpg'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Selena Gomez</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
                         </div>
-                        <div className='mobile_title'>
-                          <h3>Ave Simone</h3>
-                          <span> Details</span>
+                      </li>
+                      {/* END DETAILS */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/7.jpg'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalFour}
+                            />
+
+                            <ReactTooltip
+                              id='detail2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Ave Simone</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                    {/* END DETAILS */}
-                  </ul>
-                  {/* END DETAILS GALLERY */}
-                </TabPanel>
-                {/* END Details Gallery */}
-              </div>
-              {/* END LIST WRAPPER */}
-            </Tabs>
+                      </li>
+                      {/* END DETAILS */}
+                    </ul>
+                    {/* END PORTFOLIO LIST */}
+                  </TabPanel>
+                  {/* END ALL PORTFOLIO GALLERY */}
+
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/5.jpg'
+                              alt='Vimeo'
+                              data-tip
+                              data-for='vimeo'
+                              onClick={() => setOpen2(true)}
+                            />
+                            <ReactTooltip
+                              id='vimeo'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Teresa Butler</h5>
+                                <span>Vimeo</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END VIMEO */}
+                    </ul>
+                    {/* END PORTFOLIO LIST */}
+                  </TabPanel>
+                  {/* END VIMEO VIDEO */}
+
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/2.jpg'
+                              alt='Youtube'
+                              data-tip
+                              data-for='youtube'
+                              onClick={() => setOpen(true)}
+                            />
+                            <ReactTooltip
+                              id='youtube'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Ashely Flores</h5>
+                                <span>Youtube</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END YOUTUBE */}
+                    </ul>
+                    {/* END PORTFOLIO LIST */}
+                  </TabPanel>
+                  {/* END YOUTUBE VIDEO */}
+
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <Item
+                              original='assets/img/portfolio/4.jpg'
+                              thumbnail='assets/img/portfolio/4.jpg'
+                              width={500}
+                              height={550}
+                            >
+                              {({ ref, open }) => (
+                                <img
+                                  src='assets/img/portfolio/4.jpg'
+                                  alt='Childhood'
+                                  data-tip
+                                  data-for='shot'
+                                  role='button'
+                                  ref={ref}
+                                  onClick={open}
+                                />
+                              )}
+                            </Item>
+                            <ReactTooltip
+                              id='shot'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Derek Smith</h5>
+                                <span>Shot</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END SHOT */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <Item
+                              original='assets/img/portfolio/3.jpg'
+                              thumbnail='assets/img/portfolio/3.jpg'
+                              width={500}
+                              height={550}
+                            >
+                              {({ ref, open }) => (
+                                <img
+                                  src='assets/img/portfolio/3.jpg'
+                                  alt='Childhood'
+                                  data-tip
+                                  data-for='shot'
+                                  role='button'
+                                  ref={ref}
+                                  onClick={open}
+                                />
+                              )}
+                            </Item>
+                            <ReactTooltip
+                              id='shot2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Gloria jenkins</h5>
+                                <span>Shot</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END SHOT */}
+                    </ul>
+                    {/* END PORTFOLIO LIST */}
+                  </TabPanel>
+                  {/* END PHOTOGRAHY */}
+
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/6.jpg'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Selena Gomez</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END DETAILS */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/7.jpg'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalFour}
+                            />
+
+                            <ReactTooltip
+                              id='detail2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Ave Simone</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END DETAILS */}
+                    </ul>
+                    {/* END DETAILS GALLERY */}
+                  </TabPanel>
+                  {/* END CREATIVE PORTFOLIO GALLERY */}
+                </div>
+                {/* END LIST WRAPPER */}
+              </Tabs>
+            </div>
           </div>
         </div>
-      </div>
-      {/* </SimpleReactLightbox> */}
-
-      {/* all modal video and popup goes here */}
+      </Gallery>
+      {/* popup vidoe for youtube modal activation */}
       <ModalVideo
         channel='youtube'
         autoplay
@@ -345,7 +507,8 @@ const Portfolio = () => {
         videoId='1gyTUHP6ne8'
         onClose={() => setOpen(false)}
       />
-      {/* End Youtube Modal video */}
+
+      {/* popup vidoe for vimeo modal activation */}
       <ModalVideo
         channel='vimeo'
         autoplay
@@ -353,7 +516,6 @@ const Portfolio = () => {
         videoId='100171151'
         onClose={() => setOpen2(false)}
       />
-      {/* End Vimeo Modal Video */}
 
       {/* START MODAL FOR PORTFOLIO DETAILS */}
       <Modal
@@ -440,7 +602,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/8.jpg)',
+                              'url(assets/img/portfolio/6.jpg)',
                           }}
                         ></div>
                       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Intro = () => {
   const introContent = {
-    image: 'assets/img/slider/1.jpg',
+    image: 'assets/img/slider/2me.jpg',
     name: 'Michal Pisarski',
     designation: 'Frontend Developer',
     text: (
@@ -29,7 +29,7 @@ const Intro = () => {
   return (
     <>
       <div className='top_author_image'>
-        <img src={introContent.image} alt='about' />
+        {/* <img src={introContent.image} alt='about' /> */}
       </div>
       <div className='about_title'>
         <h3>{introContent.name}</h3>

@@ -3,6 +3,7 @@ import Intro from './Intro';
 import Skills from './Skills';
 import Resume from './Resume';
 import KnowledgeInterest from './KnowledgeInterest';
+
 const AboutMain = () => {
   return (
     <>
