@@ -3,7 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import ModalVideo from 'react-modal-video';
-import Social from './Social';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
@@ -36,18 +35,17 @@ const Portfolio = () => {
               <div className='title_flex'>
                 <div className='left'>
                   <span>Portfolio</span>
-                  <h3>Creative Portfolio</h3>
+                  <h3>Portfolio</h3>
                 </div>
               </div>
             </div>
-            {/* END TOKYO_TM_TITLE */}
 
             <div className='portfolio_filter'>
               <Tabs>
                 <TabList>
                   <Tab>All</Tab>
-                  <Tab>Vimeo</Tab>
-                  <Tab>Youtube</Tab>
+                  <Tab>SPA</Tab>
+                  <Tab>Wordpress</Tab>
                   <Tab>Photography</Tab>
                   <Tab>Details</Tab>
                 </TabList>
@@ -206,7 +204,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/6.jpg'
+                              src='assets/img/portfolio/prolegisBG.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -237,7 +235,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/7.jpg'
+                              src='assets/img/portfolio/abbvie-6.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -434,7 +432,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/6.jpg'
+                              src='assets/img/portfolio/prolegisBG.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -449,7 +447,7 @@ const Portfolio = () => {
                               className='tooltip-wrapper'
                             >
                               <div>
-                                <h5>Selena Gomez</h5>
+                                <h5>Prolegis</h5>
                                 <span>Details</span>
                               </div>
                             </ReactTooltip>
@@ -457,6 +455,7 @@ const Portfolio = () => {
                         </div>
                       </li>
                       {/* END DETAILS */}
+                      {/* abbvie */}
                       <li
                         data-aos='fade-right'
                         data-aos-duration='1200'
@@ -465,7 +464,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/7.jpg'
+                              src='assets/img/portfolio/abbvie-6.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -539,24 +538,24 @@ const Portfolio = () => {
                   className='main'
                   style={{
                     backgroundImage:
-                      'url(assets/img/portfolio/6.jpg)',
+                      'url(assets/img/portfolio/prolegis_1.png)',
                   }}
                 ></div>
               </div>
               {/* END IMAGE */}
               <div className='portfolio_main_title'>
-                <h3>Selena Gomez</h3>
+                <h3>Prolegis</h3>
                 <span>Details</span>
               </div>
               {/* END portfolio_main_title */}
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
-                    We live in a world where we need to move quickly
-                    and iterate on our ideas as flexibly as possible.
-                    Building mockups strikes the ideal balance between
-                    true-life representation of the end product and
-                    ease of modification.
+                    Prolegis is a website dedicated to . In this
+                    project I was reponsible for building the view of
+                    the application, creating menus/submenus, cards.
+                    From the frontend perspective the page is using
+                    graphql, rebass as styles and react as a framework{' '}
                   </p>
                   <p>
                     Mockups are useful both for the creative phase of
@@ -582,16 +581,11 @@ const Portfolio = () => {
                       <span className='first'>Date</span>
                       <span>March 07, 2021</span>
                     </li>
-                    <li>
-                      <span className='first'>Share</span>
-                      <Social />
-                      {/* END SOCIAL SHARE */}
-                    </li>
                   </ul>
                 </div>
               </div>
               {/* main_details */}
-
+              {/* prolegis */}
               <div className='additional_images'>
                 <ul className='gallery_zoom'>
                   <li>
@@ -602,7 +596,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/6.jpg)',
+                              'url(assets/img/portfolio/abbvie1.png)',
                           }}
                         ></div>
                       </div>
@@ -648,7 +642,7 @@ const Portfolio = () => {
         {/* END MODALBOX NEWS */}
       </Modal>
       {/* END MODAL FOR PORTFOLIO DETAILS */}
-
+      {/* abbvie */}
       {/* START MODAL FOR PORTFOLIO DETAILS */}
       <Modal
         isOpen={isOpen4}
@@ -671,7 +665,7 @@ const Portfolio = () => {
                   className='main'
                   style={{
                     backgroundImage:
-                      'url(assets/img/portfolio/7.jpg)',
+                      'url(assets/img/portfolio/abbvie1.png)',
                   }}
                 ></div>
               </div>
@@ -684,11 +678,9 @@ const Portfolio = () => {
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
-                    We live in a world where we need to move quickly
-                    and iterate on our ideas as flexibly as possible.
-                    Building mockups strikes the ideal balance between
-                    true-life representation of the end product and
-                    ease of modification.
+                    Application created usinng Material UI and REST
+                    API. For storing local data use context and
+                    reducer
                   </p>
                   <p>
                     Mockups are useful both for the creative phase of
@@ -713,12 +705,7 @@ const Portfolio = () => {
                     <li>
                       <span className='first'>Date</span>
                       <span>March 07, 2021</span>
-                    </li>
-                    <li>
-                      <span className='first'>Share</span>
-                      <Social />
-                      {/* END SOCIAL SHARE */}
-                    </li>
+                    </li>{' '}
                   </ul>
                 </div>
               </div>
@@ -734,7 +721,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/6.jpg)',
+                              'url(assets/img/portfolio/abbvie4.png)',
                           }}
                         ></div>
                       </div>
@@ -749,7 +736,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/5.jpg)',
+                              'url(assets/img/portfolio/abbvie3.png)',
                           }}
                         ></div>
                       </div>
@@ -764,7 +751,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/4.jpg)',
+                              'url(assets/img/portfolio/abbvie2.png)',
                           }}
                         ></div>
                       </div>

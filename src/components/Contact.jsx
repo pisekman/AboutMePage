@@ -51,7 +51,7 @@ const Contact = () => {
             <div className='title_flex'>
               <div className='left'>
                 <span>Contact</span>
-                <h3>Get in Touch</h3>
+                <h3>Let's get in touch</h3>
               </div>
             </div>
           </div>

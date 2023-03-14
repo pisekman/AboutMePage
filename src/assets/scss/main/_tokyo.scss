@@ -1,8 +1,8 @@
 
 html {
   overflow-x: hidden;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
 }
 body {
@@ -325,7 +325,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	03) TOKYO RIGHTPART
+/*	03)  RIGHTPART
 /*---------------------------------------------------*/
 
 .tokyo_tm_all_wrap .rightpart {
@@ -346,17 +346,17 @@ h6 {
   border-left: 1px solid #ebebeb;
   min-height: 100vh;
 }
-// .tokyo_tm_section {
-//   position: fixed;
-//   top: 0px;
-//   left: 0px;
-//   bottom: 0px;
-//   right: 0px;
-//   padding-left: 450px;
-//   overflow-x: hidden;
-//   overflow-y: auto;
+.tokyo_tm_section {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding-left: 450px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-// }
+}
 .slick-prev,
 .slick-next {
   cursor: pointer !important;
@@ -400,7 +400,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	04) TOKYO HOME
+/*	04) HOME
 /*---------------------------------------------------*/
 
 .tokyo_tm_home {
@@ -495,7 +495,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	05) TOKYO ABOUT
+/*	05) ABOUT
 /*---------------------------------------------------*/
 
 .tokyo_tm_about {
@@ -786,7 +786,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	06) TOKYO PORTFOLIO
+/*	06)  PORTFOLIO
 /*---------------------------------------------------*/
 
 .tokyo_tm_title {
@@ -1488,7 +1488,7 @@ body.modal {
 }
 
 /*---------------------------------------------------*/
-/*	9) TOKYO MAGIC CURSOR
+/*	9) MAGIC CURSOR
 /*---------------------------------------------------*/
 
 .tokyo_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor {
@@ -1540,7 +1540,7 @@ body.modal {
 }
 
 /*---------------------------------------------------*/
-/*	10) TOKYO MEDIA QUERIES (FOR SMALL DEVIVES)
+/*	10) MEDIA QUERIES 
 /*---------------------------------------------------*/
 
 @media (max-width: 1600px) {
@@ -1814,9 +1814,7 @@ body.modal {
   }
 }
 
-/*---------------------------------------------------*/
-/*	11) TOKYO 404 
-/*---------------------------------------------------*/
+// 404
 
 .tokyo_tm_section .container {
   height: 100%;

@@ -17,8 +17,9 @@ const Home = () => {
           <div className='details'>
             <h3 className='name'>Michal Pisarski</h3>
             <p className='job'>
-              Creative WebDeveloper based in Warsaw and happy to
-              travel all over Poland and Europe.
+              Creative WebDeveloper based in Warsaw. Experienced in
+              sales, hospitality and project management. Optimist,
+              full of energy alumni of E-commerce & tourism studies.
             </p>
             <Logo />
             {/* social */}
