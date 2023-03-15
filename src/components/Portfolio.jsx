@@ -15,6 +15,7 @@ const Portfolio = () => {
   // const [isOpen2, setOpen2] = useState(false);
 
   // for modal details
+  const [isVivo, setIsVivo] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
 
@@ -24,6 +25,9 @@ const Portfolio = () => {
   }
   function toggleModalFour() {
     setIsOpen4(!isOpen4);
+  }
+  function toggleModalVivo() {
+    setIsVivo(!isVivo);
   }
 
   return (
@@ -53,11 +57,11 @@ const Portfolio = () => {
                   <TabPanel>
                     <ul className='portfolio_list'>
                       <Prolegis toggleModalThree={toggleModalThree} />
-                      {/* END DETAILS */}
-                      {/* <li
+
+                      <li
                         data-aos='fade-right'
                         data-aos-duration='1200'
-                        data-aos-delay='200'
+                        data-aos-delay='100'
                       >
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
@@ -77,14 +81,169 @@ const Portfolio = () => {
                               className='tooltip-wrapper'
                             >
                               <div>
-                                <h5>ADS Abbvie</h5>
+                                <h5>ADS - invoicing </h5>
                                 <span>Details</span>
                               </div>
                             </ReactTooltip>
                           </div>
                         </div>
-                      </li> */}
+                      </li>
                       {/* END DETAILS */}
+                      {/* chiesi */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/chiesiLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Prolegis</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/vivoLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalFour}
+                            />
+
+                            <ReactTooltip
+                              id='detail2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Vivo X90 </h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/tpLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Tropem Ogara</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      {/* PM */}
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/pm1.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>ParkMagia</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/pm2.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalFour}
+                            />
+
+                            <ReactTooltip
+                              id='detail2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Park Magia</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                     {/* END PORTFOLIO LIST */}
                   </TabPanel>
@@ -186,6 +345,7 @@ const Portfolio = () => {
                           </div>
                         </div>
                       </li>
+
                       {/* first fisheye */}
 
                       {/* second  dr chiesi*/}
@@ -201,8 +361,137 @@ const Portfolio = () => {
                     {/* END DETAILS GALLERY */}
                   </TabPanel>
                   {/* END CREATIVE PORTFOLIO GALLERY */}
-                  <TabPanel>Trzecia</TabPanel>
-                  <TabPanel>Czwarta</TabPanel>
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/tp1.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Tropem Ogara</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      {/* PM */}
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/pm1.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalThree}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>ParkMagia</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                      {/* END DETAILS */}
+                      {/* fisheye */}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/pm2.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalFour}
+                            />
+
+                            <ReactTooltip
+                              id='detail2'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>ADS - invoicing </h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </TabPanel>
+                  <TabPanel>
+                    <ul className='portfolio_list'>
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/vivoLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail2'
+                              onClick={toggleModalVivo}
+                            />
+
+                            <ReactTooltip
+                              id='vivo'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>ADS - invoicing </h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </TabPanel>
                 </div>
                 {/* END LIST WRAPPER */}
               </Tabs>
@@ -470,7 +759,103 @@ const Portfolio = () => {
         </div>
         {/* END MODALBOX NEWS */}
       </Modal>
-      {/* END MODAL FOR PORTFOLIO DETAILS */}
+
+      <Modal
+        isOpen={isVivo}
+        onRequestClose={toggleModalVivo}
+        contentLabel='My dialog'
+        className='mymodal'
+        overlayClassName='myoverlay'
+        closeTimeoutMS={500}
+      >
+        <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
+          <button className='close-modal' onClick={toggleModalFour}>
+            <img src='assets/img/svg/cancel.svg' alt='close icon' />
+          </button>
+          {/* END CLOSE ICON */}
+          <div className='box_inner'>
+            <div className='description_wrap scrollable'>
+              <div className='image'>
+                <img src='assets/img/thumbs/4-3.jpg' alt='tumb' />
+                <div
+                  className='main'
+                  style={{
+                    backgroundImage:
+                      'url(assets/img/portfolio/vivo1.png)',
+                  }}
+                ></div>
+              </div>
+              {/* END IMAGE */}
+              <div className='portfolio_main_title'>
+                <h3>Ave Simone</h3>
+                <span>Details</span>
+              </div>
+              {/* END portfolio_main_title */}
+              <div className='main_details'>
+                <div className='textbox'>
+                  <p>
+                    Application created usinng Material UI and REST
+                    API. For storing local data use context and
+                    reducer. During the project I got familiar with
+                    the, implemented invoicing component, messaging
+                    system and
+                  </p>
+                  <p>
+                    Mockups are useful both for the creative phase of
+                    the project - for instance when you're trying to
+                    figure out your user flows or the proper visual
+                    hierarchy - and the production phase when they
+                    will represent the target product. Making mockups
+                    a part of your creative and development process
+                    allows you to quickly and easily ideate.
+                  </p>
+                </div>
+                <div className='detailbox'>
+                  <ul>
+                    <li>
+                      <span className='first'>Client</span>
+                      <span>Software House</span>
+                    </li>
+                    <li>
+                      <span className='first'>Category</span>
+                      <span>Details</span>
+                    </li>
+                    <li>
+                      <span className='first'>Date</span>
+                      <span>May, 2022</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* main_details */}
+
+              <div className='additional_images'>
+                <ul className='gallery_zoom'>
+                  <li>
+                    <div className='list_inner'>
+                      <div className='my_image'>
+                        <img src='img/thumbs/4-2.jpg' alt='thumb' />
+                        <div
+                          className='main'
+                          style={{
+                            backgroundImage:
+                              'url(assets/img/portfolio/vivo3.png)',
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  {/* END SHOT */}
+
+                  {/* END SHOT */}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* END BOX INNER */}
+        </div>
+        {/* END MODALBOX NEWS */}
+      </Modal>
     </>
   );
 };

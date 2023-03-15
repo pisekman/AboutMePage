@@ -122,9 +122,9 @@ export const HomePanel = () => {
 
               <TabPanel>
                 <div
-                  data-aos='fade-right'
-                  data-aos-duration='1200'
-                  data-aos-delay='200'
+                  data-aos='slide-left'
+                  data-aos-duration='800'
+                  data-aos-delay='100'
                 >
                   <Contact />
                 </div>
