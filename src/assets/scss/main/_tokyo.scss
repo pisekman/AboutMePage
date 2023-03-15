@@ -102,6 +102,14 @@ h6 {
   float: left;
   position: relative;
 }
+
+.tokyo_tm_all_wrap h1 {
+  padding: 20px 0;
+
+  @media screen and (max-width: 1199px) {
+    padding: 0;
+  }
+}
 .tokyo_tm_all_wrap,
 .tokyo_tm_all_wrap * {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
