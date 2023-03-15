@@ -1,4 +1,8 @@
-export default PortfolioMedia = () => {
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import React, { useState } from 'react';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+
+const PortfolioMedia = () => {
   return (
     <>
       <TabPanel>
@@ -11,7 +15,7 @@ export default PortfolioMedia = () => {
                   alt='Vimeo'
                   data-tip
                   data-for='vimeo'
-                  onClick={() => setOpen2(true)}
+                  // onClick={() => setOpen2(true)}
                 />
                 <ReactTooltip
                   id='vimeo'
@@ -44,7 +48,7 @@ export default PortfolioMedia = () => {
                   alt='Youtube'
                   data-tip
                   data-for='youtube'
-                  onClick={() => setOpen(true)}
+                  // onClick={() => setOpen(true)}
                 />
                 <ReactTooltip
                   id='youtube'
@@ -72,7 +76,7 @@ export default PortfolioMedia = () => {
           <li data-aos='fade-right' data-aos-duration='1200'>
             <div className='inner'>
               <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                <Item
+                {/* <Item
                   original='assets/img/portfolio/4.jpg'
                   thumbnail='assets/img/portfolio/4.jpg'
                   width={500}
@@ -89,7 +93,7 @@ export default PortfolioMedia = () => {
                       onClick={open}
                     />
                   )}
-                </Item>
+                </Item> */}
                 <ReactTooltip
                   id='shot'
                   place='bottom'
@@ -113,7 +117,7 @@ export default PortfolioMedia = () => {
           >
             <div className='inner'>
               <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                <Item
+                {/* <Item
                   original='assets/img/portfolio/3.jpg'
                   thumbnail='assets/img/portfolio/3.jpg'
                   width={500}
@@ -130,7 +134,7 @@ export default PortfolioMedia = () => {
                       onClick={open}
                     />
                   )}
-                </Item>
+                </Item> */}
                 <ReactTooltip
                   id='shot2'
                   place='bottom'
@@ -154,3 +158,5 @@ export default PortfolioMedia = () => {
     </>
   );
 };
+
+export default PortfolioMedia;

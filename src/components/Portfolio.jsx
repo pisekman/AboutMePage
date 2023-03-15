@@ -183,7 +183,7 @@ const Portfolio = () => {
                         </div>
                       </li>
                       {/* END DETAILS */}
-
+                      {/* chiesi */}
                       <li
                         data-aos='fade-right'
                         data-aos-duration='1200'
@@ -192,7 +192,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/prolegisBG.png'
+                              src='assets/img/portfolio/chiesiLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -229,6 +229,9 @@ const Portfolio = () => {
                     {/* END DETAILS GALLERY */}
                   </TabPanel>
                   {/* END CREATIVE PORTFOLIO GALLERY */}
+                  <TabPanel>Trzecia</TabPanel>
+                  <TabPanel>Czwarta</TabPanel>
+                  <TabPanel>Piata</TabPanel>
                 </div>
                 {/* END LIST WRAPPER */}
               </Tabs>

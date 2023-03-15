@@ -1,28 +1,26 @@
 import React from 'react';
-import { useState } from 'react';
-import ReactMapGL from 'react-map-gl';
+import Map from 'react-map-gl';
 
-const Map = () => {
-  const [viewport, setViewport] = useState({
-    latitude: 40.712776,
-    longitude: -74.005974,
-    zoom: 8,
-  });
-
+const MapWrapper = () => {
   return (
     <div className='map_wrap'>
       <div className='map'>
-        <ReactMapGL
+        <Map
+          initialViewState={{
+            longitude: 21.04624,
+            latitude: 52.23932,
+            zoom: 13.5,
+          }}
+          style={{ width: '100vw', height: '100vh' }}
           mapStyle={'mapbox://style/mapbox/dark-v9'}
-          mapboxApiAccessToken='pk.eyJ1IjoiYmF5YXppZGgiLCJhIjoiY2tvemdwc3ByMDg1YzJubzQxcDR0cDR3dyJ9.s1zXEb5OPqgBDcmupj3GBA'
-          {...viewport}
-          onViewportChange={(nextViewport) =>
-            setViewport(nextViewport)
+          mapboxAccessToken={
+            'pk.eyJ1IjoicGlzZWttYW4iLCJhIjoiY2xmOXRra3hhMDlhdjQzbnVjZWM5eWNscCJ9.ddsjLv8ZEjMQM0wkZ0rAdg'
           }
         />
+        ; ;
       </div>
     </div>
   );
 };
 
-export default Map;
+export default MapWrapper;
