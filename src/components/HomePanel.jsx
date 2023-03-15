@@ -71,14 +71,14 @@ export const HomePanel = () => {
                     <span className='menu_content'>About</span>
                   </Tab>
 
-                  <Tab>
+                  {/* <Tab>
                     <img
                       className='svg'
                       src='/assets/img/svg/briefcase.svg'
                       alt='briefcase'
                     />
                     <span className='menu_content'>Portfolio</span>
-                  </Tab>
+                  </Tab> */}
                   <Tab>
                     <img
                       className='svg'
@@ -116,9 +116,9 @@ export const HomePanel = () => {
                 </div>
               </TabPanel>
 
-              <TabPanel>
+              {/* <TabPanel>
                 <Portfolio />
-              </TabPanel>
+              </TabPanel> */}
 
               <TabPanel>
                 <div
