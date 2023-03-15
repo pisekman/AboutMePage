@@ -222,7 +222,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pm2.png'
+                              src='assets/img/portfolio/pmLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -237,7 +237,7 @@ const Portfolio = () => {
                               className='tooltip-wrapper'
                             >
                               <div>
-                                <h5>Park Magia</h5>
+                                <h5>Magazyn Atrakcje</h5>
                                 <span>Details</span>
                               </div>
                             </ReactTooltip>
@@ -370,7 +370,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/tp1.png'
+                              src='assets/img/portfolio/tpLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -434,7 +434,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pm2.png'
+                              src='assets/img/portfolio/pmLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -769,7 +769,7 @@ const Portfolio = () => {
         closeTimeoutMS={500}
       >
         <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
-          <button className='close-modal' onClick={toggleModalFour}>
+          <button className='close-modal' onClick={toggleModalVivo}>
             <img src='assets/img/svg/cancel.svg' alt='close icon' />
           </button>
           {/* END CLOSE ICON */}
@@ -794,20 +794,25 @@ const Portfolio = () => {
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
-                    Application created usinng Material UI and REST
-                    API. For storing local data use context and
-                    reducer. During the project I got familiar with
-                    the, implemented invoicing component, messaging
-                    system and
+                    Created several product pages for one of the
+                    mobile company. They are adjusted to price
+                    agregators standards. The work included mobile and
+                    desktop views.
                   </p>
                   <p>
-                    Mockups are useful both for the creative phase of
-                    the project - for instance when you're trying to
-                    figure out your user flows or the proper visual
-                    hierarchy - and the production phase when they
-                    will represent the target product. Making mockups
-                    a part of your creative and development process
-                    allows you to quickly and easily ideate.
+                    <li>
+                      <span
+                        className='first'
+                        style={{ padding: '0 15px' }}
+                      >
+                        LIVE:
+                      </span>
+                      <a href='https://effervescent-tiramisu-3c721f.netlify.app/'>
+                        <span>
+                          https://effervescent-tiramisu-3c721f.netlify.app/
+                        </span>
+                      </a>
+                    </li>
                   </p>
                 </div>
                 <div className='detailbox'>
