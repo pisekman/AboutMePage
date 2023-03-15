@@ -17,7 +17,6 @@ const MapWrapper = () => {
             'pk.eyJ1IjoicGlzZWttYW4iLCJhIjoiY2xmOXRra3hhMDlhdjQzbnVjZWM5eWNscCJ9.ddsjLv8ZEjMQM0wkZ0rAdg'
           }
         />
-        ; ;
       </div>
     </div>
   );

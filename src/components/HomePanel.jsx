@@ -108,9 +108,9 @@ export const HomePanel = () => {
 
               <TabPanel>
                 <div
-                  data-aos='fade-right'
+                  data-aos='flip-right'
                   data-aos-duration='1200'
-                  data-aos-delay='100'
+                  data-aos-delay='50'
                 >
                   <AboutMain />
                 </div>

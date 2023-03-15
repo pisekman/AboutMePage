@@ -28,10 +28,11 @@ const Intro = () => {
 
   return (
     <>
-      <div className='top_author_image'>
-        {/* <img src={introContent.image} alt='about' /> */}
-      </div>
-      <div className='about_title'>
+      <div
+        className='about_title'
+        data-aos='fade-left'
+        data-aos-duration='1400'
+      >
         <h3>{introContent.name}</h3>
         <span>{introContent.designation}</span>
       </div>

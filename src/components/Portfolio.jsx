@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Gallery } from 'react-photoswipe-gallery';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import Modal from 'react-modal';
+import { Prolegis } from './portfolio_pages/Prolegis';
 
 Modal.setAppElement('#root');
 
@@ -43,47 +44,17 @@ const Portfolio = () => {
               <Tabs>
                 <TabList>
                   <Tab>All</Tab>
-                  <Tab>SPA</Tab>
+                  <Tab>Web</Tab>
                   <Tab>Wordpress</Tab>
-                  <Tab>Photography</Tab>
-                  <Tab>Details</Tab>
+                  <Tab>SPA</Tab>
                 </TabList>
                 {/* END TABLIST */}
                 <div className='list_wrapper'>
                   <TabPanel>
                     <ul className='portfolio_list'>
-                      <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                        data-aos-delay='100'
-                      >
-                        <div className='inner'>
-                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
-                            <img
-                              src='assets/img/portfolio/prolegisBG.png'
-                              alt='Details'
-                              data-tip
-                              data-for='detail'
-                              onClick={toggleModalThree}
-                            />
-
-                            <ReactTooltip
-                              id='detail'
-                              place='bottom'
-                              type='light'
-                              effect='float'
-                              className='tooltip-wrapper'
-                            >
-                              <div>
-                                <h5>Prolegis</h5>
-                                <span>Details</span>
-                              </div>
-                            </ReactTooltip>
-                          </div>
-                        </div>
-                      </li>
+                      <Prolegis toggleModalThree={toggleModalThree} />
                       {/* END DETAILS */}
-                      <li
+                      {/* <li
                         data-aos='fade-right'
                         data-aos-duration='1200'
                         data-aos-delay='200'
@@ -112,13 +83,14 @@ const Portfolio = () => {
                             </ReactTooltip>
                           </div>
                         </div>
-                      </li>
+                      </li> */}
                       {/* END DETAILS */}
                     </ul>
                     {/* END PORTFOLIO LIST */}
                   </TabPanel>
                   {/* END ALL PORTFOLIO GALLERY */}
 
+                  {/*  TAB 2 */}
                   <TabPanel>
                     <ul className='portfolio_list'>
                       <li
@@ -160,7 +132,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/fyLogo.png'
+                              src='assets/img/portfolio/abbvie-6.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -231,7 +203,6 @@ const Portfolio = () => {
                   {/* END CREATIVE PORTFOLIO GALLERY */}
                   <TabPanel>Trzecia</TabPanel>
                   <TabPanel>Czwarta</TabPanel>
-                  <TabPanel>Piata</TabPanel>
                 </div>
                 {/* END LIST WRAPPER */}
               </Tabs>
@@ -239,25 +210,7 @@ const Portfolio = () => {
           </div>
         </div>
       </Gallery>
-      {/* popup vidoe for youtube modal activation */}
-      {/* <ModalVideo
-        channel='youtube'
-        autoplay
-        isOpen={isOpen}
-        videoId='1gyTUHP6ne8'
-        onClose={() => setOpen(false)}
-      /> */}
-
-      {/* popup vidoe for vimeo modal activation */}
-      {/* <ModalVideo
-        channel='vimeo'
-        autoplay
-        isOpen={isOpen2}
-        videoId='100171151'
-        onClose={() => setOpen2(false)}
-      /> */}
-
-      {/* START MODAL FOR PORTFOLIO DETAILS */}
+      {/* Prolegis Modal  */}
       <Modal
         isOpen={isOpen3}
         onRequestClose={toggleModalThree}
@@ -292,35 +245,42 @@ const Portfolio = () => {
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
-                    Prolegis is a website dedicated to . In this
-                    project I was reponsible for building the view of
-                    the application, creating menus/submenus, cards.
-                    From the frontend perspective the page is using
-                    graphql, rebass as styles and react as a framework{' '}
+                    Prolegis is a website dedicated for education
+                    sector. In this project I was reponsible for
+                    building the view of the application, creating
+                    menus/submenus, cards. From the frontend
+                    perspective the page is using graphql, rebass as
+                    styles and react as a framework.
                   </p>
+
                   <p>
-                    Mockups are useful both for the creative phase of
-                    the project - for instance when you're trying to
-                    figure out your user flows or the proper visual
-                    hierarchy - and the production phase when they
-                    will represent the target product. Making mockups
-                    a part of your creative and development process
-                    allows you to quickly and easily ideate.
+                    Prolegis is a website dedicated for education
+                    sector. In this project I was reponsible for
+                    building the view of the application, creating
+                    menus/submenus, cards. From the frontend
+                    perspective the page is using graphql, rebass as
+                    styles and react as a framework.
                   </p>
                 </div>
                 <div className='detailbox'>
                   <ul>
                     <li>
                       <span className='first'>Client</span>
-                      <span>Alvaro Morata</span>
+                      <span>Software House</span>
                     </li>
                     <li>
                       <span className='first'>Category</span>
                       <span>Details</span>
                     </li>
                     <li>
+                      <span className='first'>Website url</span>
+                      <a href='https://prolegis.com.pl/'>
+                        <span>https://prolegis.com.pl/</span>
+                      </a>
+                    </li>
+                    <li>
                       <span className='first'>Date</span>
-                      <span>March 07, 2021</span>
+                      <span>March-April, 2021</span>
                     </li>
                   </ul>
                 </div>
@@ -337,7 +297,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/abbvie1.png)',
+                              'url(assets/img/portfolio/pl1.png)',
                           }}
                         ></div>
                       </div>
@@ -352,13 +312,14 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/2.jpg)',
+                              'url(assets/img/portfolio/pl3.png)',
                           }}
                         ></div>
                       </div>
                     </div>
                   </li>
                   {/* END SHOT */}
+
                   <li>
                     <div className='list_inner'>
                       <div className='my_image'>
@@ -367,7 +328,7 @@ const Portfolio = () => {
                           className='main'
                           style={{
                             backgroundImage:
-                              'url(assets/img/portfolio/3.jpg)',
+                              'url(assets/img/portfolio/pl5.png)',
                           }}
                         ></div>
                       </div>
@@ -421,7 +382,9 @@ const Portfolio = () => {
                   <p>
                     Application created usinng Material UI and REST
                     API. For storing local data use context and
-                    reducer
+                    reducer. During the project I got familiar with
+                    the, implemented invoicing component, messaging
+                    system and
                   </p>
                   <p>
                     Mockups are useful both for the creative phase of
@@ -437,7 +400,7 @@ const Portfolio = () => {
                   <ul>
                     <li>
                       <span className='first'>Client</span>
-                      <span>Alvaro Morata</span>
+                      <span>Software House</span>
                     </li>
                     <li>
                       <span className='first'>Category</span>
@@ -445,8 +408,8 @@ const Portfolio = () => {
                     </li>
                     <li>
                       <span className='first'>Date</span>
-                      <span>March 07, 2021</span>
-                    </li>{' '}
+                      <span>May, 2022</span>
+                    </li>
                   </ul>
                 </div>
               </div>
