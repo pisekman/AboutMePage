@@ -6,6 +6,7 @@ import Home from './Home';
 import AboutMain from './about/AboutMain';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
+import ServicesMain from './ServicesMain';
 
 export const HomePanel = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -82,6 +83,14 @@ export const HomePanel = () => {
                   <Tab>
                     <img
                       className='svg'
+                      src='/assets/img/svg/setting.svg'
+                      alt='avatar'
+                    />
+                    <span className='menu_content'>Service</span>
+                  </Tab>
+                  <Tab>
+                    <img
+                      className='svg'
                       src='/assets/img/svg/mail.svg'
                       alt='mail'
                     />
@@ -118,6 +127,16 @@ export const HomePanel = () => {
 
               <TabPanel>
                 <Portfolio />
+              </TabPanel>
+
+              <TabPanel>
+                <div
+                  data-aos='fade-right'
+                  data-aos-duration='1200'
+                  data-aos-delay='100'
+                >
+                  <ServicesMain />
+                </div>
               </TabPanel>
 
               <TabPanel>
