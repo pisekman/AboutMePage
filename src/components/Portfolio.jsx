@@ -4,15 +4,23 @@ import { Gallery } from 'react-photoswipe-gallery';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import Modal from 'react-modal';
 import { Prolegis } from './portfolio_pages/Prolegis';
+import ModalVideo from 'react-modal-video';
 
 Modal.setAppElement('#root');
 
 const Portfolio = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isVivo, setIsVivo] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
+  const [isChesi, setIsChiesi] = useState(false);
+  const [isDrsim, setIsDrsim] = useState(false);
 
   // for modal details method
+
+  // function toggleIsOpen() {
+  //   setIsOpen(!isOpen);
+  // }
   function toggleModalThree() {
     setIsOpen3(!isOpen3);
   }
@@ -21,6 +29,14 @@ const Portfolio = () => {
   }
   function toggleModalVivo() {
     setIsVivo(!isVivo);
+  }
+
+  function toggleModalChiesi() {
+    setIsChiesi(!isChesi);
+  }
+
+  function toggleModalDrsim() {
+    setIsDrsim(!isDrsim);
   }
 
   return (
@@ -82,6 +98,39 @@ const Portfolio = () => {
                         </div>
                       </li>
 
+                      {/* sim */}
+
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/drsimLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalDrsim}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Dr Sim</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
                       {/* chiesi */}
                       <li
                         data-aos='fade-right'
@@ -95,7 +144,7 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={toggleModalChiesi}
                             />
 
                             <ReactTooltip
@@ -828,6 +877,182 @@ const Portfolio = () => {
                   {/* END SHOT */}
                 </ul>
               </div>
+            </div>
+          </div>
+          {/* END BOX INNER */}
+        </div>
+        {/* END MODALBOX NEWS */}
+      </Modal>
+
+      <Modal
+        isOpen={isChesi}
+        onRequestClose={toggleModalVivo}
+        contentLabel='My dialog'
+        className='mymodal'
+        overlayClassName='myoverlay'
+        closeTimeoutMS={500}
+      >
+        <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
+          <button className='close-modal' onClick={toggleModalVivo}>
+            <img src='assets/img/svg/cancel.svg' alt='close icon' />
+          </button>
+          <div className='box_inner'>
+            <div className='description_wrap scrollable'>
+              <div className='image'>
+                <img src='assets/img/thumbs/4-3.jpg' alt='tumb' />
+                <div
+                  className='main'
+                  style={{
+                    backgroundImage:
+                      'url(assets/img/portfolio/chiesi1.png)',
+                  }}
+                ></div>
+              </div>
+              {/* END IMAGE */}
+              <div className='portfolio_main_title'>
+                <h3>Vivo product carts</h3>
+                <span>Details</span>
+              </div>
+              {/* END portfolio_main_title */}
+              <div className='main_details'>
+                <div className='textbox'>
+                  <p>
+                    Dr Chiesi purpose was to engage internall
+                    shareholders of the client. I was responsible for
+                    implementing main layout, login, cards view.
+                    Technology used: React, Scss, RestApi + wordpress
+                  </p>
+                  <p></p>
+                </div>
+                <div className='detailbox'>
+                  <ul>
+                    <li>
+                      <span className='first'>Client</span>
+                      <span>Software House</span>
+                    </li>
+
+                    <li>
+                      <span className='first'>Date</span>
+                      <span>May, 2022</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* main_details */}
+
+              <div className='additional_images'>
+                <ul className='gallery_zoom'>
+                  <li>
+                    <div className='list_inner'>
+                      <div className='my_image'>
+                        <img src='img/thumbs/4-2.jpg' alt='thumb' />
+                        <div
+                          className='main'
+                          style={{
+                            backgroundImage:
+                              'url(assets/img/portfolio/chiesi2.png)',
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  {/* END SHOT */}
+
+                  {/* END SHOT */}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* END BOX INNER */}
+        </div>
+        {/* END MODALBOX NEWS */}
+      </Modal>
+
+      <Modal
+        isOpen={isDrsim}
+        onRequestClose={toggleModalDrsim}
+        contentLabel='My dialog'
+        className='mymodal'
+        overlayClassName='myoverlay'
+        closeTimeoutMS={500}
+      >
+        <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
+          <button className='close-modal' onClick={toggleModalDrsim}>
+            <img src='assets/img/svg/cancel.svg' alt='close icon' />
+          </button>
+          <div className='box_inner'>
+            <div className='description_wrap scrollable'>
+              <div className='image'>
+                <img src='assets/img/thumbs/4-3.jpg' alt='tumb' />
+                <div
+                  className='main'
+                  style={{
+                    backgroundImage:
+                      'url(assets/img/portfolio/drsimLogo.png)',
+                  }}
+                >
+                  <ModalVideo
+                    channel='youtube'
+                    autoplay
+                    isOpen={isOpen}
+                    videoId='U3yfNtW-5QQ'
+                    onClose={() => setIsOpen(false)}
+                  />
+                </div>
+              </div>
+              {/* END IMAGE */}
+              <div className='portfolio_main_title'>
+                <h3>Dr Sim - RWD</h3>
+                <span>Details</span>
+              </div>
+              {/* END portfolio_main_title */}
+              <div className='main_details'>
+                <div className='textbox'>
+                  <p>
+                    Dr Sim is a quizz app, which purpose was to engage
+                    internal shareholders of the client. I was
+                    responsible for implementing RWD.
+                  </p>
+                  <p>
+                    <li>
+                      <span
+                        className='first'
+                        style={{ padding: '0 15px' }}
+                      >
+                        LIVE:
+                      </span>
+                      <a href='https://drsim.pl/'>
+                        <span>https://drsim.pl/</span>
+                      </a>
+                    </li>
+                  </p>
+                  <p>
+                    <iframe
+                      width='560'
+                      height='345'
+                      src='https://www.youtube.com/embed/U3yfNtW-5QQ'
+                      title='YouTube video player'
+                      frameborder='0'
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                      allowfullscreen
+                    ></iframe>
+                  </p>
+                </div>
+                <div className='detailbox'>
+                  <ul>
+                    <li>
+                      <span className='first'>Client</span>
+                      <span>Software House</span>
+                    </li>
+
+                    <li>
+                      <span className='first'>Date</span>
+                      <span>July, 2022</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* main_details */}
             </div>
           </div>
           {/* END BOX INNER */}
