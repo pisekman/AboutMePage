@@ -8,13 +8,6 @@ import { Prolegis } from './portfolio_pages/Prolegis';
 Modal.setAppElement('#root');
 
 const Portfolio = () => {
-  // // for popup video for youtube
-  // const [isOpen, setOpen] = useState(false);
-
-  // // popup video for vimeo
-  // const [isOpen2, setOpen2] = useState(false);
-
-  // for modal details
   const [isVivo, setIsVivo] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
@@ -88,7 +81,7 @@ const Portfolio = () => {
                           </div>
                         </div>
                       </li>
-                      {/* END DETAILS */}
+
                       {/* chiesi */}
                       <li
                         data-aos='fade-right'
@@ -113,7 +106,7 @@ const Portfolio = () => {
                               className='tooltip-wrapper'
                             >
                               <div>
-                                <h5>Prolegis</h5>
+                                <h5>Dr Chiesi</h5>
                                 <span>Details</span>
                               </div>
                             </ReactTooltip>
@@ -133,7 +126,7 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail2'
-                              onClick={toggleModalFour}
+                              onClick={toggleModalVivo}
                             />
 
                             <ReactTooltip
@@ -191,7 +184,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pm1.png'
+                              src='assets/img/portfolio/pmLogo2.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -222,7 +215,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pmLogo.png'
+                              src='assets/img/portfolio/atrakcjeLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -313,7 +306,7 @@ const Portfolio = () => {
                           </div>
                         </div>
                       </li>
-                      {/* END DETAILS */}
+
                       {/* chiesi */}
                       <li
                         data-aos='fade-right'
@@ -402,7 +395,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pm1.png'
+                              src='assets/img/portfolio/pmLogo2.png'
                               alt='Details'
                               data-tip
                               data-for='detail'
@@ -434,7 +427,7 @@ const Portfolio = () => {
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
-                              src='assets/img/portfolio/pmLogo.png'
+                              src='assets/img/portfolio/atrakcjeLogo.png'
                               alt='Details'
                               data-tip
                               data-for='detail2'
@@ -483,7 +476,7 @@ const Portfolio = () => {
                               className='tooltip-wrapper'
                             >
                               <div>
-                                <h5>ADS - invoicing </h5>
+                                <h5>Vivo product pages </h5>
                                 <span>Details</span>
                               </div>
                             </ReactTooltip>
@@ -512,7 +505,7 @@ const Portfolio = () => {
           <button className='close-modal' onClick={toggleModalThree}>
             <img src='assets/img/svg/cancel.svg' alt='close icon' />
           </button>
-          {/* END CLOSE ICON */}
+
           <div className='box_inner'>
             <div className='description_wrap scrollable'>
               <div className='image'>
@@ -521,16 +514,16 @@ const Portfolio = () => {
                   className='main'
                   style={{
                     backgroundImage:
-                      'url(assets/img/portfolio/prolegis_1.png)',
+                      'url(assets/img/portfolio/prolegis1.png)',
                   }}
                 ></div>
               </div>
-              {/* END IMAGE */}
+
               <div className='portfolio_main_title'>
                 <h3>Prolegis</h3>
                 <span>Details</span>
               </div>
-              {/* END portfolio_main_title */}
+
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
@@ -542,14 +535,7 @@ const Portfolio = () => {
                     styles and react as a framework.
                   </p>
 
-                  <p>
-                    Prolegis is a website dedicated for education
-                    sector. In this project I was reponsible for
-                    building the view of the application, creating
-                    menus/submenus, cards. From the frontend
-                    perspective the page is using graphql, rebass as
-                    styles and react as a framework.
-                  </p>
+                  <p>{/* todo */}</p>
                 </div>
                 <div className='detailbox'>
                   <ul>
@@ -557,10 +543,7 @@ const Portfolio = () => {
                       <span className='first'>Client</span>
                       <span>Software House</span>
                     </li>
-                    <li>
-                      <span className='first'>Category</span>
-                      <span>Details</span>
-                    </li>
+
                     <li>
                       <span className='first'>Website url</span>
                       <a href='https://prolegis.com.pl/'>
@@ -673,16 +656,13 @@ const Portfolio = () => {
                     API. For storing local data use context and
                     reducer. During the project I got familiar with
                     the, implemented invoicing component, messaging
-                    system and
+                    system and shopping cart component.
                   </p>
                   <p>
-                    Mockups are useful both for the creative phase of
-                    the project - for instance when you're trying to
-                    figure out your user flows or the proper visual
-                    hierarchy - and the production phase when they
-                    will represent the target product. Making mockups
-                    a part of your creative and development process
-                    allows you to quickly and easily ideate.
+                    The purpose of the application was to create a
+                    space for local representatives with upgrading
+                    current ordering and invoicing system which
+                    previously was created using php and bootstrap.
                   </p>
                 </div>
                 <div className='detailbox'>
@@ -691,10 +671,7 @@ const Portfolio = () => {
                       <span className='first'>Client</span>
                       <span>Software House</span>
                     </li>
-                    <li>
-                      <span className='first'>Category</span>
-                      <span>Details</span>
-                    </li>
+
                     <li>
                       <span className='first'>Date</span>
                       <span>May, 2022</span>
@@ -757,7 +734,7 @@ const Portfolio = () => {
           </div>
           {/* END BOX INNER */}
         </div>
-        {/* END MODALBOX NEWS */}
+        {/* END ADS */}
       </Modal>
 
       <Modal
@@ -772,7 +749,6 @@ const Portfolio = () => {
           <button className='close-modal' onClick={toggleModalVivo}>
             <img src='assets/img/svg/cancel.svg' alt='close icon' />
           </button>
-          {/* END CLOSE ICON */}
           <div className='box_inner'>
             <div className='description_wrap scrollable'>
               <div className='image'>
@@ -781,13 +757,13 @@ const Portfolio = () => {
                   className='main'
                   style={{
                     backgroundImage:
-                      'url(assets/img/portfolio/vivo1.png)',
+                      'url(assets/img/portfolio/vivoLogo2.png)',
                   }}
                 ></div>
               </div>
               {/* END IMAGE */}
               <div className='portfolio_main_title'>
-                <h3>Ave Simone</h3>
+                <h3>Vivo product carts</h3>
                 <span>Details</span>
               </div>
               {/* END portfolio_main_title */}
@@ -821,10 +797,7 @@ const Portfolio = () => {
                       <span className='first'>Client</span>
                       <span>Software House</span>
                     </li>
-                    <li>
-                      <span className='first'>Category</span>
-                      <span>Details</span>
-                    </li>
+
                     <li>
                       <span className='first'>Date</span>
                       <span>May, 2022</span>

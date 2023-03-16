@@ -1,4 +1,3 @@
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 export const Prolegis = ({ toggleModalThree }) => {
