@@ -15,6 +15,7 @@ const Portfolio = () => {
   const [isOpen4, setIsOpen4] = useState(false);
   const [isChesi, setIsChiesi] = useState(false);
   const [isDrsim, setIsDrsim] = useState(false);
+  const [isFisheye, setIsFisheye] = useState(false);
 
   // for modal details method
 
@@ -33,6 +34,10 @@ const Portfolio = () => {
 
   function toggleModalChiesi() {
     setIsChiesi(!isChesi);
+  }
+
+  function toggleModalFisheye() {
+    setIsFisheye(!isFisheye);
   }
 
   function toggleModalDrsim() {
@@ -337,7 +342,7 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail2'
-                              onClick={toggleModalFour}
+                              onClick={toggleModalFisheye}
                             />
 
                             <ReactTooltip
@@ -369,7 +374,7 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={toggleModalChiesi}
                             />
 
                             <ReactTooltip
@@ -694,7 +699,7 @@ const Portfolio = () => {
               </div>
               {/* END IMAGE */}
               <div className='portfolio_main_title'>
-                <h3>Ave Simone</h3>
+                <h3>ADS Abbvie</h3>
                 <span>Details</span>
               </div>
               {/* END portfolio_main_title */}
@@ -893,7 +898,7 @@ const Portfolio = () => {
         closeTimeoutMS={500}
       >
         <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
-          <button className='close-modal' onClick={toggleModalVivo}>
+          <button className='close-modal' onClick={toggleModalChiesi}>
             <img src='assets/img/svg/cancel.svg' alt='close icon' />
           </button>
           <div className='box_inner'>
@@ -910,14 +915,14 @@ const Portfolio = () => {
               </div>
               {/* END IMAGE */}
               <div className='portfolio_main_title'>
-                <h3>Vivo product carts</h3>
+                <h3>Dr Chiesi</h3>
                 <span>Details</span>
               </div>
               {/* END portfolio_main_title */}
               <div className='main_details'>
                 <div className='textbox'>
                   <p>
-                    Dr Chiesi purpose was to engage internall
+                    Dr Chiesi purpose was to engage internal
                     shareholders of the client. I was responsible for
                     implementing main layout, login, cards view.
                     Technology used: React, Scss, RestApi + wordpress
