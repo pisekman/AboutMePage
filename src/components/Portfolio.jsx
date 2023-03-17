@@ -5,6 +5,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip';
 import Modal from 'react-modal';
 import { Prolegis } from './portfolio_pages/Prolegis';
 import ModalVideo from 'react-modal-video';
+import { navigate } from 'react-router-dom';
 
 Modal.setAppElement('#root');
 
@@ -17,11 +18,6 @@ const Portfolio = () => {
   const [isDrsim, setIsDrsim] = useState(false);
   const [isFisheye, setIsFisheye] = useState(false);
 
-  // for modal details method
-
-  // function toggleIsOpen() {
-  //   setIsOpen(!isOpen);
-  // }
   function toggleModalThree() {
     setIsOpen3(!isOpen3);
   }
@@ -67,7 +63,10 @@ const Portfolio = () => {
                   <Tab>SPA</Tab>
                 </TabList>
                 {/* END TABLIST */}
-                <div className='list_wrapper'>
+                <div
+                  className='list_wrapper'
+                  style={{ height: '100%' }}
+                >
                   <TabPanel>
                     <ul className='portfolio_list'>
                       <Prolegis toggleModalThree={toggleModalThree} />
@@ -169,9 +168,9 @@ const Portfolio = () => {
                       </li>
 
                       <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                        data-aos-delay='100'
+                      // data-aos='fade-right'
+                      // data-aos-duration='1200'
+                      // data-aos-delay='100'
                       >
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
@@ -199,10 +198,34 @@ const Portfolio = () => {
                         </div>
                       </li>
 
-                      <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                      >
+                      <li>
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/fyLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalFisheye}
+                            />
+
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Fisheye</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
@@ -210,7 +233,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={() =>
+                                window.open(
+                                  'https://www.tropemogara.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -231,10 +259,7 @@ const Portfolio = () => {
 
                       {/* PM */}
 
-                      <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                      >
+                      <li>
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
@@ -242,7 +267,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={() =>
+                                window.open(
+                                  'https://www.parkmagia.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -261,11 +291,7 @@ const Portfolio = () => {
                         </div>
                       </li>
 
-                      <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                        data-aos-delay='100'
-                      >
+                      <li>
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
                             <img
@@ -273,7 +299,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail2'
-                              onClick={toggleModalFour}
+                              onClick={() =>
+                                window.open(
+                                  'https://magazynatrakcje.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -342,7 +373,7 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail2'
-                              onClick={toggleModalFisheye}
+                              onClick={toggleModalFour}
                             />
 
                             <ReactTooltip
@@ -395,15 +426,36 @@ const Portfolio = () => {
 
                       {/* first fisheye */}
 
-                      {/* second  dr chiesi*/}
+                      <li
+                        data-aos='fade-right'
+                        data-aos-duration='1200'
+                        data-aos-delay='100'
+                      >
+                        <div className='inner'>
+                          <div className='entry tokyo_tm_portfolio_animation_wrap'>
+                            <img
+                              src='assets/img/portfolio/fyLogo.png'
+                              alt='Details'
+                              data-tip
+                              data-for='detail'
+                              onClick={toggleModalFisheye}
+                            />
 
-                      {/* third dr sim */}
-
-                      {/* koj */}
-
-                      {/* wordpress TropemOGara */}
-
-                      {/* wordpress nolimit */}
+                            <ReactTooltip
+                              id='detail'
+                              place='bottom'
+                              type='light'
+                              effect='float'
+                              className='tooltip-wrapper'
+                            >
+                              <div>
+                                <h5>Fisheye</h5>
+                                <span>Details</span>
+                              </div>
+                            </ReactTooltip>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                     {/* END DETAILS GALLERY */}
                   </TabPanel>
@@ -421,7 +473,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={() =>
+                                window.open(
+                                  'https://www.tropemogara.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -453,7 +510,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail'
-                              onClick={toggleModalThree}
+                              onClick={() =>
+                                window.open(
+                                  'https://www.parkmagia.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -471,7 +533,6 @@ const Portfolio = () => {
                           </div>
                         </div>
                       </li>
-                      {/* END DETAILS */}
                       {/* fisheye */}
                       <li
                         data-aos='fade-right'
@@ -485,7 +546,12 @@ const Portfolio = () => {
                               alt='Details'
                               data-tip
                               data-for='detail2'
-                              onClick={toggleModalFour}
+                              onClick={() =>
+                                window.open(
+                                  'https://magazynatrakcje.pl/',
+                                  '_blank',
+                                )
+                              }
                             />
 
                             <ReactTooltip
@@ -505,12 +571,13 @@ const Portfolio = () => {
                       </li>
                     </ul>
                   </TabPanel>
+
                   <TabPanel>
                     <ul className='portfolio_list'>
                       <li
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                        data-aos-delay='100'
+                      // data-aos='fade-right'
+                      // data-aos-duration='1200'
+                      // data-aos-delay='100'
                       >
                         <div className='inner'>
                           <div className='entry tokyo_tm_portfolio_animation_wrap'>
@@ -843,6 +910,19 @@ const Portfolio = () => {
                         </span>
                       </a>
                     </li>
+                    <li>
+                      <span
+                        className='first'
+                        style={{ padding: '0 15px' }}
+                      >
+                        LIVE:
+                      </span>
+                      <a href='https://superlative-taiyaki-e8453f.netlify.app/'>
+                        <span>
+                          https://superlative-taiyaki-e8453f.netlify.app/
+                        </span>
+                      </a>
+                    </li>
                   </p>
                 </div>
                 <div className='detailbox'>
@@ -1058,6 +1138,124 @@ const Portfolio = () => {
                 </div>
               </div>
               {/* main_details */}
+            </div>
+          </div>
+          {/* END BOX INNER */}
+        </div>
+        {/* END MODALBOX NEWS */}
+      </Modal>
+
+      <Modal
+        isOpen={isFisheye}
+        onRequestClose={toggleModalFisheye}
+        contentLabel='My dialog'
+        className='mymodal'
+        overlayClassName='myoverlay'
+        closeTimeoutMS={500}
+      >
+        <div className='tokyo_tm_modalbox_news portfolio_tm_modalbox'>
+          <button
+            className='close-modal'
+            onClick={toggleModalFisheye}
+          >
+            <img src='assets/img/svg/cancel.svg' alt='close icon' />
+          </button>
+          <div className='box_inner'>
+            <div className='description_wrap scrollable'>
+              <div className='image'>
+                <img src='assets/img/thumbs/4-3.jpg' alt='tumb' />
+                <div
+                  className='main'
+                  style={{
+                    backgroundImage:
+                      'url(assets/img/portfolio/fyLogo.png)',
+                  }}
+                ></div>
+              </div>
+              {/* END IMAGE */}
+              <div className='portfolio_main_title'>
+                <h3>Fisheye</h3>
+                <span>Details</span>
+              </div>
+              {/* END portfolio_main_title */}
+              <div className='main_details'>
+                <div className='textbox'>
+                  <p>
+                    Fisheye is a digitial content management tool,
+                    which is still being developed. During my
+                    assignment I worked on login page, register, input
+                    validation, main layout using Material UI and
+                    Typescript
+                  </p>
+                  <p></p>
+                  <p></p>
+                </div>
+                <div className='detailbox'>
+                  <ul>
+                    <li>
+                      <span className='first'>Client</span>
+                      <span>Software House</span>
+                    </li>
+
+                    <li>
+                      <span className='first'>Date</span>
+                      <span>June, 2022</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* main_details */}
+              <div className='additional_images'>
+                <ul className='gallery_zoom'>
+                  <li>
+                    <div className='list_inner'>
+                      <div className='my_image'>
+                        <img src='img/thumbs/4-2.jpg' alt='thumb' />
+                        <div
+                          className='main'
+                          style={{
+                            backgroundImage:
+                              'url(assets/img/portfolio/f1.png)',
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className='my_image'
+                      style={{ marginTop: '20px' }}
+                    >
+                      <div
+                        className='main'
+                        style={{
+                          backgroundImage:
+                            'url(assets/img/portfolio/f3.png)',
+                          backgroundSize: 'cover',
+                          height: '700px',
+                          width: 'auto',
+                        }}
+                      ></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className='my_image'
+                      style={{ marginTop: '20px' }}
+                    >
+                      <div
+                        className='main'
+                        style={{
+                          backgroundImage:
+                            'url(assets/img/portfolio/f2.png)',
+                          backgroundSize: 'cover',
+                          height: '700px',
+                        }}
+                      ></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           {/* END BOX INNER */}
