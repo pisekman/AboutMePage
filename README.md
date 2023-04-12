@@ -6,12 +6,13 @@ This repository contains the source code for my personal website. The website is
 ## Features
 The website includes the following features:
 
-About me section where I describe my background and interests
-Resume/CV section where visitors can download my current CV
-Projects section where I showcase my past and current projects
-Contact section where visitors can send me a message
-Technologies Used
-The website was built using the following technologies:
+- About me section where I describe my background and interests
+- Resume/CV section where visitors can download my current CV
+- Projects section where I showcase my past and current projects
+- Contact section where visitors can send me a message
+- Technologies Used
+
+# The website was built using the following technologies:
 
 HTML5
 CSS3
